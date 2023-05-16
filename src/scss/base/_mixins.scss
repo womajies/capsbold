@@ -1,0 +1,40 @@
+// mixins
+@mixin posCenter($topPos, $leftPos) {
+  position: absolute;
+  top: #{$topPos};
+  left: #{$leftPos};
+  transform: translate(-#{$leftPos}, -#{$topPos});
+}
+
+// REM
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+// EM
+@function em($px, $current: 16) {
+  $result: math.div($px, $current) + em;
+  @return $result;
+}
+
+// Text truncating to width and lines
+@mixin text-truncate($trunc-width: 100%, $max-lines: 1) {
+  max-width: $trunc-width !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+
+  @if ($max-lines > 1) {
+    @supports (-webkit-line-clamp: $max-lines) {
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: initial !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: $max-lines !important;
+      -webkit-box-orient: vertical !important;
+    }
+  }
+}

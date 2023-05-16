@@ -1,0 +1,165 @@
+.checkbox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 23px;
+  padding-left: 35px;
+  margin: 6px 0 9px;
+  cursor: pointer;
+  transition: padding $transition-duration $transition-timing-function;
+  @media screen and (max-width: $mobileS__max) {
+    padding-right: 30px;
+  }
+
+  &:hover {
+    padding-right: 30px;
+
+    .checkbox__delete {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .checkbox__name {
+      color: $accent-color;
+    }
+
+    .checkbox__custom::before {
+      background-color: rgba($accent-color, 0.2);
+    }
+  }
+
+  &__input:focus-visible {
+    & ~ .checkbox__delete {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    & ~ .checkbox__name {
+      padding-right: 30px;
+      color: $accent-color;
+    }
+
+    & ~ .checkbox__custom::before {
+      background-color: rgba($accent-color, 0.2);
+    }
+  }
+
+  &__input:checked {
+    & + .checkbox__custom {
+      &::before {
+        background-color: $accent-color;
+      }
+
+      &::after {
+        border-color: $white-color;
+      }
+    }
+
+    & ~ .checkbox__name {
+      text-decoration: line-through;
+      color: $dark-color;
+    }
+
+    &:hover ~ .checkbox__name {
+      color: $white-color;
+    }
+
+    & ~ .checkbox__descr {
+      display: none;
+    }
+  }
+
+  &__custom {
+    width: 0;
+    height: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 1px;
+      transform: translateY(-50%);
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      background-color: $dark-color;
+      transition: background-color $transition-duration
+        $transition-timing-function;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 6px;
+      transform: translateY(-50%) rotate(-45deg);
+      display: block;
+      width: 10px;
+      height: 5px;
+      border-left: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      transition: border-color $transition-duration
+        $transition-timing-function;
+    }
+  }
+
+  &__name {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    color: $white-color;
+    transition: color $transition-duration $transition-timing-function, padding $transition-duration $transition-timing-function;
+  }
+
+  &__descr {
+    position: relative;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-word;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: $dark-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 20px;
+      bottom: 13px;
+      width: 12px;
+      height: 34px;
+      transform: rotate(90deg);
+      transform-origin: left bottom;
+      background: linear-gradient(
+        180deg,
+        #252e42 9.38%,
+        rgba(37, 46, 66, 0) 66.15%
+      );
+    }
+  }
+
+  &__delete {
+    position: absolute;
+    color: $accent-color;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $transition-duration $transition-timing-function, color $transition-duration $transition-timing-function;
+    @media screen and (max-width: $mobileS__max) {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:hover {
+      color: red;
+    }
+  }
+}

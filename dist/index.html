@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <!-- <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <title>Todo List</title>
+</head>
+
+<body>
+  <div class="layout">
+    <main class="main">
+      <section class="todo">
+        <form class="todo__wrapper" autocomplete="off">
+          <header class="todo__header">
+            <h1 class="todo__title">Todo list</h1>
+            <button class="todo__btn" type="submit">Add</button>
+            <div class="todo__duplicate todo__duplicate--1"></div>
+            <div class="todo__duplicate todo__duplicate--2"></div>
+          </header>
+
+          <fieldset class="todo__fields">
+            <legend class="todo__legend">Add task</legend>
+            <div class="field">
+              <input id="todo-name" placeholder="Enter name" type="text" required class="field__input">
+              <label for="todo-name" class="field__label">
+                Name*
+              </label>
+            </div>
+            <div class="field">
+              <input id="todo-descr" placeholder="Enter description" type="text" class="field__input">
+              <label for="todo-descr" class="field__label">
+                Description
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="todo__list">
+            <!-- <label class="checkbox">
+              <input type="checkbox" class="checkbox__input visually-hidden">
+              <div class="checkbox__custom"></div>
+              <span class="checkbox__name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae ut quidem eveniet corrupti odio</span>
+              <span class="checkbox__descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. psa explicabo deleniti harum magni?</span>
+              <button class="checkbox__delete" type="button" aria-label="Delete task" title="Delete">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprites/sprite-noattr.svg#delete"></use>
+                </svg>
+              </button>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input visually-hidden">
+              <div class="checkbox__custom"></div>
+              <span class="checkbox__name">Lorem, ipsum dolor</span>
+              <span class="checkbox__descr">Lorem ipsum dolor sit, amet consectetur</span>
+              <button class="checkbox__delete" type="button" aria-label="Delete task" title="Delete">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprites/sprite-noattr.svg#delete"></use>
+                </svg>
+              </button>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input visually-hidden">
+              <div class="checkbox__custom"></div>
+              <span class="checkbox__name">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+              <span class="checkbox__descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+              <button class="checkbox__delete" type="button" aria-label="Delete task" title="Delete">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprites/sprite-noattr.svg#delete"></use>
+                </svg>
+              </button>
+            </label> -->
+          </div>
+        </form>
+        <a class="todo__copyright" href="https://vipdeveloper.ru/portfolio" target="_blank">
+          <copy>&copy; 2023. Shamil Magomedov</copy>
+        </a>
+      </section>
+    </main>
+  </div>
+  <script src='js/main.min.js' type='module'></script>
+</body>
+
+</html>
