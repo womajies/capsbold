@@ -1,7 +1,7 @@
 # Shamil Magomedov
 ## Web Developer
 ### Preview:
-[vipdeveloper.ru/IDBI](https://vipdeveloper.ru/capsbold)
+[vipdeveloper.ru/capsbold](https://vipdeveloper.ru/capsbold)
 
 **На борту сборки:**
 * ES6 импорт плагинов
