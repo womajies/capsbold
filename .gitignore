@@ -13,7 +13,7 @@
 
 # gulp
 # /gulp
-# /gulp/config/ftp.js
+/gulp/config/ftp.js
 
 # Log files
 *.log

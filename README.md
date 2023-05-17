@@ -1,5 +1,7 @@
 # Shamil Magomedov
 ## Web Developer
+### Preview:
+[vipdeveloper.ru/IDBI](https://vipdeveloper.ru/capsbold)
 
 **На борту сборки:**
 * ES6 импорт плагинов
@@ -27,3 +29,4 @@
 
 Спрайты создаются командой:
 - npm run svgSprive (А также командами dev и build)
+
